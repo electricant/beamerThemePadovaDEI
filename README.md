@@ -1,5 +1,5 @@
 # beamerThemePadovaDEI
-Beamer theme for the Department of Information Engineering at the Universty of Padova.
+Beamer theme for the Department of Information Engineering at the University of Padova.
 
 ## Installation
 
