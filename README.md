@@ -15,6 +15,10 @@ Copy the files in this repo in the newly created folders and recreate the packag
     texhash: Updating /home/user/texmf/ls-R...
     texhash: Done.
 
+### AUR package
+
+For Arch Linux users there is an AUR package: [aur.archlinux.org/packages/latex-padova-dei](https://aur.archlinux.org/packages/latex-padova-dei/)
+
 ## Usage
 
 Declare the teme at the top of your `.tex` file with the line `\usetheme{PadovaDEI}`.
