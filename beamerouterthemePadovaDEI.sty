@@ -10,76 +10,80 @@
 % Actual beamer definitions
 % ==============================================================================
 \defbeamertemplate*{frametitle}{pd theme}
-{
-	\nointerlineskip
-	\begin{beamercolorbox}[ht=2.5em,wd=\paperwidth]{frametitle}
-		\raisebox{0.25em}{\makebox[0.22\paperwidth][r]{\includegraphics[height=2em]{logo_unipd}}}
-		\hfill	
-		\raisebox{1em}{\makebox[0.53\paperwidth][c]{\strut\insertframetitle\strut}}
-		\hfill
-		\raisebox{0.25em}{\makebox[0.22\paperwidth][l]{\raisebox{1.25em}{\makebox[1em][c]{}}\includegraphics[height=2em]{logo_dei}}}
-	\end{beamercolorbox}
+{%
+	\nointerlineskip%
+	\begin{beamercolorbox}[ht=2.5em,wd=\paperwidth]{frametitle}%
+		\raisebox{0.25em}{\makebox[0.3\paperheight][l]{\hspace{0.02\paperheight}~\includegraphics[height=2em]{logo_unipd}}}%
+		\hfill%
+		\raisebox{0.9em}{\makebox[0.4\paperheight][c]{\strut\insertframetitle\strut}}%
+		\hfill%
+		\raisebox{0.25em}{\makebox[0.3\paperheight][r]{\includegraphics[height=2em]{logo_dei}~\hspace{0.02\paperheight}}}%
+	\end{beamercolorbox}%
 }
 
-\defbeamertemplate*{title page}{pd theme} {
-	\vskip15ex
-	\centering\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par
-	\ifx\insertsubtitle\@empty
-	\else
-		\vskip2ex
-		{\centering\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}
-	\fi
-	\ifx\insertauthor\@empty
-	\else
-		\vskip5ex
-		{\centering\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par}
-	\fi
-	\ifx\insertdate\@empty
-	\else
-		\vskip0.75ex
-		{\centering\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate\par}
-	\fi
-	\vfill
+\defbeamertemplate*{title page}{pd theme} {%
+	\vskip15ex%
+	\centering\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle\par%
+	\ifx\insertsubtitle\@empty%
+	\else%
+		\vskip2ex%
+		{\centering\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+	\fi%
+	\ifx\insertauthor\@empty%
+	\else%
+		\vskip5ex%
+		{\centering\usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par}%
+	\fi%
+	\ifx\insertdate\@empty%
+	\else%
+		\vskip0.75ex%
+		{\centering\usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate\par}%
+	\fi%
+	\vfill%
 }
 
 
-\defbeamertemplate*{background canvas}{pd theme} {
-	\ifnum\c@framenumber=1
-		\color{rossoPantano}\rule{\paperwidth}{\paperheight}
-	\fi
-	\ifnum\c@framenumber=\inserttotalframenumber
+\defbeamertemplate*{background canvas}{pd theme} {%
+	\ifnum\c@framenumber=1%
+		\color{rossoPantano}\rule{\paperwidth}{\paperheight}%
+	\fi%
+	\ifnum\c@framenumber=\inserttotalframenumber%
         % Last frame
-		\color{rossoPantano}\rule{\paperwidth}{\paperheight}
-	\fi
+		\color{rossoPantano}\rule{\paperwidth}{\paperheight}%
+	\fi%
 }
 
 
-\defbeamertemplate*{footline}{pd theme} {
-	\ifnum\c@framenumber=\inserttotalframenumber
-		\ifbeamerpadovanologos
-			\pgftext[right,bottom,at=\pgfpoint{0.95\paperwidth}{0.77\paperheight}]{\pgfuseimage{logoDeiWhiteBig}}
-			\pgftext[left,bottom,at=\pgfpoint{0.05\paperwidth}{0.77\paperheight}]{\pgfuseimage{logoUnipdWhiteBig}}
-		\fi
-	\fi
-
-	\ifnum\c@framenumber=1
-		\ifbeamerpadovanologos
-			\pgftext[right,bottom,at=\pgfpoint{0.95\paperwidth}{0.77\paperheight}]{\pgfuseimage{logoDeiWhiteBig}}
-			\pgftext[left,bottom,at=\pgfpoint{0.05\paperwidth}{0.77\paperheight}]{\pgfuseimage{logoUnipdWhiteBig}}
-		\fi
-	\else
-		\ifnum\c@framenumber<\inserttotalframenumber
-			\pgftext[right,bottom,at=\pgfpoint{\paperwidth}{0cm}]{\color{rossoPantano}\rule{\paperwidth}{0.05\paperheight}}
-			\pgftext[right,top,at=\pgfpoint{0.98\paperwidth}{0.025\paperwidth}]{
-				\usebeamerfont{frame number in foot}
-				\usebeamercolor[fg]{frame number in foot}\insertframenumber{} of \inserttotalframenumber
-			}
-			\pgftext[left,top,at=\pgfpoint{0.02\paperwidth}{0.025\paperwidth}]{
-				\usebeamerfont{frame number in foot}
-				\usebeamercolor[fg]{frame number in foot}\insertauthor 
-			}
-		\fi
-	\fi
+\defbeamertemplate*{footline}{pd theme} {%
+	\ifnum\c@framenumber=\inserttotalframenumber%
+		\ifbeamerpadovanologos%
+			\pgftext[right,bottom,at=\pgfpoint{0.95\paperwidth}{0.77\paperheight}]{\pgfuseimage{logoDeiWhiteBig}}%
+			\pgftext[left,bottom,at=\pgfpoint{0.05\paperwidth}{0.77\paperheight}]{\pgfuseimage{logoUnipdWhiteBig}}%
+		\fi%
+	\fi%
+%
+	\ifnum\c@framenumber=1%
+		\ifbeamerpadovanologos%
+			\pgftext[right,bottom,at=\pgfpoint{0.95\paperwidth}{0.77\paperheight}]{\pgfuseimage{logoDeiWhiteBig}}%
+			\pgftext[left,bottom,at=\pgfpoint{0.05\paperwidth}{0.77\paperheight}]{\pgfuseimage{logoUnipdWhiteBig}}%
+		\fi%
+	\else%
+		\ifnum\c@framenumber<\inserttotalframenumber%
+			\pgftext[right,bottom,at=\pgfpoint{\paperwidth}{0cm}]{\color{rossoPantano}\rule{\paperwidth}{0.05\paperheight}}%
+			\pgftext[right,top,at=\pgfpoint{0.98\paperwidth}{0.035\paperheight}]{%
+				\usebeamerfont{frame number in foot}%
+				\usebeamercolor[fg]{frame number in foot}\insertframenumber{} / \inserttotalframenumber%
+			}%
+			\pgftext[top,at=\pgfpoint{0.5\paperwidth}{0.035\paperheight}]{%
+				\usebeamerfont{frame number in foot}%
+				\usebeamercolor[fg]{frame number in foot}\insertshorttitle%
+			}%
+			\pgftext[left,top,at=\pgfpoint{0.02\paperwidth}{0.035\paperheight}]{%
+				\usebeamerfont{frame number in foot}%
+				\usebeamercolor[fg]{frame number in foot}\insertshortauthor%
+			}%
+		\fi%
+	\fi%
 }
 
 \mode
