@@ -35,6 +35,7 @@ Declare the teme at the top of your `.tex` file with the line
 Package version 1.0
 
 (c) 2017 Paolo Scaramuzza \<<paoscr@gmail.com>>
+
 Contributors: Davide Peressoni\<<davide.peressoni@tuta.io>>
 
 This work may be distributed and/or modified under the
